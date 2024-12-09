@@ -66,6 +66,7 @@ $header-border-width:                   1px;
 $header-logo-sm-height:                 55px;           // auto for turn off - this value is relevant from breakpoint below (not included) down
 $header-logo-sm-height-breakpoint:      "xxl";          // sm, md, lg, xl, xxl
 
+$header-socials-icon-font-size:         map-get($font-sizes, 1);
 $header-socials-icon-color:             $primary;
 $header-socials-icon-hover-color:       $orange;
 
