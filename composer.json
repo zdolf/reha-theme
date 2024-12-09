@@ -1,0 +1,8 @@
+{
+    "name": "lzaplata/nphorice-theme",
+    "type": "october-theme",
+    "description": "Theme for NP Hořice.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

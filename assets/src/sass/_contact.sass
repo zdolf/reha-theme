@@ -1,0 +1,37 @@
+.contact
+    &-card
+        .img
+            .overlay
+                background-color: $contact-card-image-overlay-bg
+                opacity: 0
+                transition: $transition-base
+
+                .icon
+                    font-size: $contact-card-image-overlay-icon-font-size
+
+        .title
+            font-size: $contact-card-title-font-size
+            font-weight: $contact-card-title-font-weight
+
+        .job
+            font-size: $contact-card-job-font-size
+
+        .mobile, .phone, .email
+            .icon
+                font-size: $contact-card-contact-icon-font-size
+                color: $contact-card-contact-icon-color
+
+            a
+                color: $contact-card-contact-link-color
+                text-decoration: underline
+                text-decoration-color: $contact-card-contact-link-underline-color
+                transition: $transition-base
+
+                &:hover
+                    color: $contact-card-contact-link-hover-color
+                    text-decoration-color: $contact-card-contact-link-hover-underline-color
+
+        &:hover
+            .img
+                .overlay
+                    opacity: 1

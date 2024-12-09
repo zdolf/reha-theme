@@ -1,0 +1,75 @@
+items:
+    -
+        title: 'Metodiky rehabilitace'
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '5'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Lymfatické drenáže'
+        type: page
+        code: ''
+        reference: '6'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Laserové terapie'
+        type: page
+        code: ''
+        reference: '7'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Magnetoterapie
+        type: page
+        code: ''
+        reference: '8'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Elektroléčba
+        type: page
+        code: ''
+        reference: '9'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Ultrazvuková terapie'
+        type: page
+        code: ''
+        reference: '10'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Vodoléčba
+        type: page
+        code: ''
+        reference: '11'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: Služby

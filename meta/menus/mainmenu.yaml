@@ -1,0 +1,60 @@
+items:
+    -
+        title: Úvod
+        type: cms-page
+        code: ''
+        reference: homepage
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'O nás'
+        type: page
+        code: ''
+        reference: '2'
+        cmsPage: page
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Služby
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '5'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Ceník
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '12'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakt
+        nesting: null
+        type: page
+        url: null
+        code: ''
+        reference: '13'
+        cmsPage: page
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Main Menu'
