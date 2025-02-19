@@ -1,7 +1,7 @@
 {
     "name": "zdolf/reha-theme",
     "type": "october-theme",
-    "description": "Theme for NP Hořice.",
+    "description": "Theme for REHA-centrum Trutnov",
     "require": {
         "composer/installers": "~1.0"
     }

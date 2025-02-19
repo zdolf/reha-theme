@@ -1,9 +1,9 @@
-name: 'NP Hořice'
-description: 'Theme for NP Hořice.'
-author: 'Lukáš Záplata'
+name: 'REHA-centrum Trutnov'
+description: 'Theme for REHA-centrum Trutnov.'
+author: 'Adam Valenta'
 homepage: ''
-authorCode: LZaplata
-code: nphorice
+authorCode: zdolf
+code: reha
 parent: ''
 database: '0'
 require:
@@ -14,6 +14,10 @@ require:
     - janvince.smallgdpr
     - lzaplata.gallery
     - lzaplata.files
+    - lzaplata.extensions
+    - lzaplata.pages
+    - lzaplata.pricelists
+    - lzaplata.openinghours
 form:
     tabs:
         fields:
