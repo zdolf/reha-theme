@@ -1,0 +1,9 @@
+{% if email %}
+    <p class="mb-0 d-flex align-items-center">
+        <i class="ph ph-envelope-simple me-2 icon__font text-primary"></i>
+
+        <a href="mailto:{{ email }}" class="link-info">
+            {{ email }}
+        </a>
+    </p>
+{% endif %}

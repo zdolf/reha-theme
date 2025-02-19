@@ -43,30 +43,4 @@
                             strong
                                 font-weight: $table-th-font-weight
 
-        &-files
-            ul, ol
-                margin-bottom: 0 !important
 
-                li
-                    a
-                        color: $files-link-color
-                        text-decoration: underline
-                        text-decoration-color: $files-link-underline-color
-                        transition: $transition-base
-
-                        &:hover
-                            color: $files-link-hover-color
-                            text-decoration-color: $files-link-hover-underline-color
-
-        &-text, &-files
-            ul
-                padding-left: 0
-                margin-bottom: map-get($spacers, 4)
-
-                li
-                    list-style-type: none
-
-                    &:before
-                        content: "•"
-                        position: relative
-                        margin-right: 5px

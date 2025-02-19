@@ -4,11 +4,18 @@
 @import "slider"
 @import "footer"
 @import "post"
-@import "content"
 @import "map"
 @import "sidebar"
 @import "breadcrumbs"
+@import "cookies"
+@import "flash-message"
+@import "image-text"
+@import "text"
+@import "file"
+@import "icon"
+
 @import "contact"
+@import "content"
 
 header
     .nav
@@ -26,7 +33,8 @@ header
                                 padding: $nav-level-1-padding-y 0
 
 main
-    .breadcrumbs-container
+    #breadcrumb //.breadcrumbs-container
+        padding: map-get($spacers, 2)
         background-color: $light
 
 #map-wrapper

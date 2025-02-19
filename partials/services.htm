@@ -1,0 +1,34 @@
+{% set items = {
+    'metodiky-rehabilitace': 'Metodiky rehabilitace',
+    'lymfaticke-drenaze': 'Lymfatické drenáže',
+    'laserove-terapie': 'Laserové terapie',
+    'magnetoterapie': 'Magnetoterapie',
+    'elektrolecba': 'Elektroléčba',
+    'ultrazvukova-terapie': 'Ultrazvuková terapie',
+    'vodolecba': 'Vodoléčba'
+} %}
+<div class="swiper scrollable-swiper" data-swiper-autoplay="2000" data-slides-per-view="4">
+    <div class="swiper-wrapper">
+        {% for key, item in items %}
+        <div class="swiper-slide">
+            <div class="post post-card">
+                <a href="{{ "page"|page({fullslug: 'sluzby/' ~ key}) }}" class="position-relative d-flex flex-column gap-3">
+                    <p class="img mb-0 position-relative overflow-hidden">
+                        <img src="{{ ('assets/images/services/' ~ key ~ '.jpg') | theme }}" alt="Metodiky rehabilitace obrázek" class="img-fluid w-100">
+
+                        <span class="overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <i class="ph ph-arrow-circle-up-right icon"></i>
+                        </span>
+                    </p>
+
+                    <h3 class="title mb-0">
+                        {{ item }}
+                    </h3>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="swiper-scrollbar position-relative start-0 end-0 w-100 bottom-0 mt-4 mt-xl-5"></div>
+</div>

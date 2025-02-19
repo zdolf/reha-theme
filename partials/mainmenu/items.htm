@@ -15,7 +15,7 @@
                 </span>
             {% endif %}
 
-            {% if item.items and level < 2 %}
+            {% if item.items and level < 2 and this.theme.mainmenu_dropdown %}
                 <i class="ph ph-caret-down ms-1 submenu-toggler"></i>
 
                 <div class="submenu">

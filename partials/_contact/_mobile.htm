@@ -1,0 +1,9 @@
+{% if mobile %}
+    <p class="mb-0 d-flex align-items-center">
+        <i class="ph ph-device-mobile me-2 icon__font text-primary"></i>
+
+        <a href="tel:{{ mobile }}" class="link-info">
+            {{ mobile }}
+        </a>
+    </p>
+{% endif %}

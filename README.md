@@ -12,6 +12,10 @@
 
 `npx mix`
 
+3. Seed all blueprints, languages and data
+
+`php artisan theme:seed <author-themename>`
+
 ## Watching SASS and JS file changes
 
 You can run watch command while styling the theme to automatically compile you assets.

@@ -1,31 +1,21 @@
-<div class="contact contact-card d-flex flex-column gap-3">
+<div class="d-flex flex-column gap-3">
     {% if item.image %}
         <p class="img mb-0 position-relative overflow-hidden">
             <img src="{{ item.image.thumb(600, 600, {"mode": "crop"}) }}" alt="{{ item.image.description }}" class="img-fluid w-100">
         </p>
     {% endif %}
 
-    <div class="d-flex flex-column gap-1">
-        <h4 class="title mb-0">
+    <div class="d-flex flex-column">
+        <p class="contact__title mb-0 fw-medium">
             {{ item.title }}
-        </h4>
+        </p>
 
-        {% if item.job %}
-            <p class="mb-0">
-                {{ item.job }}
-            </p>
-        {% endif %}
+        {% partial "_contact/_job" job=(itemUpdate.job ?: item.job) size="small" %}
     </div>
 
     <div class="d-flex flex-column">
-        {% if item.mobile %}
-            <p class="mobile mb-0 d-flex align-items-center">
-                <i class="icon ph ph-device-mobile me-2"></i>
-
-                <a href="tel:{{ item.mobile }}">
-                    {{ item.mobile }}
-                </a>
-            </p>
-        {% endif %}
+        {% partial "_contact/_mobile" mobile=(itemUpdate.mobile ?: item.mobile) %}
+        {% partial "_contact/_phone" phone=(itemUpdate.phone ?: item.phone) %}
+        {% partial "_contact/_email" email=(itemUpdate.email ?: item.email) %}
     </div>
 </div>

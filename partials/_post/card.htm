@@ -1,16 +1,16 @@
 <div class="post post-card">
-    <a href="{{ item.url }}" class="position-relative d-flex flex-column gap-3">
+    <a href="{{ link ?: item.url }}" class="position-relative d-flex flex-column gap-3">
         {% if image %}
             <p class="img mb-0 position-relative overflow-hidden">
                 {% if image.path %}
-                    <img src="{{ image.thumb(600, 400, {"mode": "crop"}) }}" alt="{{ image.description }}" class="img-fluid w-100">
+                    <img src="{{ image.thumb(600, 400, {"mode": "fit"}) }}" alt="{{ image.description }}" class="img-fluid w-100">
                 {% else %}
                     <img src="{{ image|media }}" alt="{{ image.description }}" class="img-fluid w-100">
                 {% endif %}
 
-                <span class="overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                    <i class="ph ph-arrow-circle-up-right icon"></i>
-                </span>
+{#                <span class="overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center">#}
+{#                    <i class="ph ph-arrow-circle-up-right icon"></i>#}
+{#                </span>#}
             </p>
         {% endif %}
 
@@ -20,12 +20,16 @@
     {#        {{ post.published_at|date("j. n. Y") }}#}
     {#    </p>#}
 
-        <h3 class="title mb-0">
-            {{ item.title }}
-        </h3>
+{#        <h3 class="title mb-0 text-center">#}
+{#            {{ item.title }}#}
+{#        </h3>#}
 
-    {#    <div class="excerpt mt-2 fs-13 ls-n02 transition">#}
-    {#        {{ post.excerpt|raw }}#}
-    {#    </div>#}
+        {% if item.excerpt or item.perex %}
+            <div class="perex mt-n2 text">
+                <p class="mb-0">
+                    {{ item.excerpt ?: item.perex|raw }}
+                </p>
+            </div>
+        {% endif %}
     </a>
 </div>

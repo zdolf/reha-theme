@@ -1,6 +1,8 @@
 import lightGallery from "lightgallery";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import Swiper from "swiper";
+import {Pagination, Autoplay, Navigation, Scrollbar} from "swiper/modules";
 
 window.lightGallery = lightGallery;
 window.lgThumbnail = lgThumbnail;
@@ -34,6 +36,7 @@ lightGallery(document.getElementById("gallery"), {
 });
 
 var sliderSwiper = new Swiper(".slider-swiper", {
+    modules: [Navigation, Pagination, Autoplay],
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -41,9 +44,9 @@ var sliderSwiper = new Swiper(".slider-swiper", {
     pagination: {
         el: ".swiper-pagination",
     },
-    // autoplay: {
-    //     delay: 5000,
-    // },
+    autoplay: {
+        delay: 5000,
+    },
 });
 
 // var eventsSwiper = new Swiper(".events-swiper", {
@@ -84,34 +87,47 @@ var sliderSwiper = new Swiper(".slider-swiper", {
 //     },
 // });
 
-var scrollableSwiper = new Swiper(".scrollable-swiper", {
-    scrollbar: {
-        el: ".swiper-scrollbar",
-        hide: false,
-    },
-    slidesPerView: 1,
-    spaceBetween: 30,
-    slidesOffsetBefore: 12,
-    slidesOffsetAfter: 12,
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 3,
-        },
-        992: {
-            slidesPerView: 4,
-            slidesOffsetBefore: $(".container-lg").offset().left,
-            slidesOffsetAfter: $(".container-lg").offset().left,
-        },
-        1200: {
-            slidesPerView: 5,
-            slidesOffsetBefore: $(".container-lg").offset().left,
-            slidesOffsetAfter: $(".container-lg").offset().left,
-        },
-    },
-});
+const scrollableSwiperWrappers = document.querySelectorAll(".scrollable-swiper");
+
+if (scrollableSwiperWrappers) {
+    scrollableSwiperWrappers.forEach((scrollableSwiperWrapper) => {
+        const slidesPerView = scrollableSwiperWrapper.dataset.slidesPerView;
+        const scrollableSwiper = new Swiper(scrollableSwiperWrapper, {
+            modules: [Scrollbar, Pagination, Autoplay],
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+            slidesPerView: 1,
+            spaceBetween: 48,
+            breakpoints: {
+                576: {
+                    slidesPerView: Math.min(2, slidesPerView),
+                    spaceBetween: 24,
+                },
+                768: {
+                    slidesPerView: Math.min(2, slidesPerView),
+                    spaceBetween: 24,
+                },
+                992: {
+                    slidesPerView: Math.min(3, slidesPerView),
+                    spaceBetween: 48,
+                },
+                1200: {
+                    slidesPerView: Math.min(4, slidesPerView),
+                    spaceBetween: 48,
+                },
+                1400: {
+                    slidesPerView: slidesPerView,
+                    spaceBetween: 48,
+                },
+            },
+            autoplay: {
+                delay: 3000,
+            },
+        });
+    });
+}
 
 $(document).ready(function () {
     $(".dropdown-menu").on("click", "li a", function() {

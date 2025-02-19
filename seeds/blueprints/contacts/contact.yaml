@@ -18,7 +18,17 @@ navigation:
     parent: Contacts\Contact
     order: 10
 
+customMessages:
+    buttonCreate: Nový kontakt
+    titleCreateForm: Vytvořit kontakt
+    titleUpdateForm: Upravit kontakt
+    titleIndexList: Kontakty
+
 fields:
+    title:
+        column:
+            label: Jméno
+
     image:
         label: Obrázek
         type: fileupload
@@ -32,8 +42,6 @@ fields:
         label: Pozice
         type: text
         span: right
-        column: false
-        scope: false
 
     mobile:
         label: Mobil
@@ -52,14 +60,6 @@ fields:
     email:
         label: E-mail
         type: text
-        span: left
-        column: false
-        scope: false
-
-    categories:
-        label: Kategorie
-        type: entries
-        source: Contacts\Category
         span: left
         column: false
         scope: false

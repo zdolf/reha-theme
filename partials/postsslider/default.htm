@@ -1,0 +1,5 @@
+{% set run = __SELF__.onRun() %}
+{% set posts = __SELF__.posts %}
+{% set row_cols = __SELF__.properties.rowCols %}
+
+{% partial "_swiper/scrollable" items=posts partial="_post/card" slides_per_view=row_cols %}
